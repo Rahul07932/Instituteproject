@@ -1,0 +1,86 @@
+{%extends 'base.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {%block a1%}
+    <style>
+       
+        table{
+            position: absolute;
+            margin-top: -560px;
+            
+        }
+        h1{
+            position: absolute;
+            margin-top:-600px;
+            margin-left:500px;
+            color:red;
+        }
+        th{
+           
+            background-color: green;
+            color:white;
+            padding:10px;
+            width:400px;
+        }
+        td{
+            
+            background-color: gray;
+            color:white;
+            text-align: center;
+            width:400px;
+        }
+        #one{
+            background-color:orange;
+            color:white;
+            text-align: center;
+            width:400px;
+        }
+        }
+       
+        
+    </style>
+    <h1> Courses We Offered now</h1>
+    
+     {%if course%}
+     <table border="2px">
+        
+        <tr>
+            <th>Course Name</th>
+            <th> Course Fee</th>
+            <th> Course Duration</th>
+            <th> StartDate & Time </th>
+            <th> Trainer Name</th>
+            <th> Trainer Experience</th>
+            <th> Training Mode</th>
+            <th>Book Now</th>
+
+        </tr>
+        <tr>
+            {%for i in course%}
+            <td>{{i.course_name}}</td>
+            <td>{{i.fee}}</td>
+            <td>{{i.duration}}</td>
+            <td>{{i.stardate}}</td>
+            <td>{{i.trainer_name}}</td>
+            <td>{{i.trainer_exp}}</td>
+            <td>{{i.training_mode}}</td>
+            <td id="one"><a href="{%url 'enroll' i.id%}">Book Now</a></td>
+            </tr>
+            {%endfor%}
+
+     </table>
+      {%else%}
+       <h6> No New Courses found!!!</h6>
+     {%endif%}
+
+    {%endblock%}
+    
+    
+</body>
+</html>

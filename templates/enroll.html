@@ -1,0 +1,91 @@
+{%extends 'base.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    {%block a1%}
+    <style>
+       .from{
+        position: absolute;
+        margin-top:-600px;
+        background-color: gray;
+        margin-left:500px;
+       }
+       input{
+        width:400px;
+        
+       }
+       .b1{
+        color:white; 
+        background-color: aqua;
+        width:100px; 
+        height: 30px;
+        border:none;
+       }
+       .b2{
+        color:white; 
+        background-color: red;
+        width:100px; 
+        height:30px;
+        border:none;
+       }
+       h1{
+        color:white;
+       }
+       .a1{
+        position:absolute;
+        margin-top:-550px;
+        margin-left:500px;
+        color:red;
+        height:200px; 
+        width:300px;
+       }
+       .a2{
+        position:absolute;
+        margin-top:-550px;
+        margin-left:800px;
+        height:200px; 
+    
+       }
+       h5{
+        color:black; 
+        font-size: larger;
+       }
+       h1{
+        color:white; 
+       }
+       h2{
+        color:blue; 
+        font-size:x-large;
+       }
+       label{
+        color:red; 
+        font-size: medium;
+       }
+    </style>
+    <fieldset class="from">
+    <h1>Student Information</h1>
+    <form method="POST">
+        {%csrf_token%}
+        <br> <label>Enter Your Name:</label><br><input type="text" name="fullname">
+        <br><label>Enter Email Id:</label><br><input type="email" name="email">
+        <br><label>Enter Mobile No:</label><br><input type="text" name="mob">
+        <br><label>Course Name:</label><br><input type="text" name="course" value="{{data.course_name}}"> 
+        <br><label>Coure Fee:</label><br> <input type="text"  name="fee" value="{{data.fee}}">
+        <br><label>Coure Duration:</label><br> <input type="text"  name="duration" value="{{data.duration}}">
+        <br><label>Start Date:</label><br> <input type="text"  name="startdate" value="{{data.stardate}}">
+        <br><label>Trainer Name:</label><br> <input type="text"  name="trainername" value="{{data.trainer_name}}">
+        <br><label>Training Mode:</label><br> <input type="text"  name="mode" value="{{data.training_mode}}"><br>
+        <br>
+        <button type="submit" class="b1">Submit</button> &nbsp; &nbsp;
+        <button type="reset" class="b2">Cancel</button>
+    </form>
+    </fieldset>
+   
+    {%endblock%}
+</body>
+</html>

@@ -1,0 +1,90 @@
+{%extends 'base.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {%block a1%}
+    {%load static%}
+    <style>
+        .one{
+            position: absolute;
+            margin-top:-580px;
+            height:500px;
+            width:400px; 
+            background-color:gray;
+            
+        }
+        h1{
+            color:red;
+            background-color:white;
+        }
+        h6{
+            font-size:medium;
+            color:white;
+        }
+        .two{
+            position: absolute;
+            margin-left:900px; 
+            margin-top:-550px;
+            height:300px; 
+            width:400px; 
+            
+        }
+        h4{
+            color:red; 
+            font-size:large;
+            margin-left: 20px;
+        }
+        .three{
+            position: absolute;
+            margin-top:-580px; 
+            margin-left:500px;
+            background-image: url('/static/images/pentagon.jpg');
+            height:500px; 
+            width:380px; 
+        }
+        .h4{
+            color:black
+        }
+        .four{
+            position: absolute;
+            margin-top:-400px; 
+            margin-left:900px;
+        }
+        .h1{
+            margin-left:30px;
+            color:blue;
+        }
+        .five{
+            position: absolute;
+            margin-top:-250px; 
+            margin-left:900px;
+        }
+    </style>
+    <div class="one">
+     <h1><u>Mr. Ravi Shankar Aradhya</u></h1>
+     <h6>Founder Mr. Ravi Shankar Aradhya has started Pentagon Space to address the issues of Technological drift that requires upskilling and reskilling of existing professionals in the companies. At the same time we aim at reaching out to the masses and make High end technology available to aspirants of knowledge at an affordable price. The future being data the vision, mission and goal of the company is oriented towards delivering the technologies to “master the future” which in fact is the tagline of the company.</h6>
+    <h6>Our Founder is known for his teaching techniques which help the students in easy understandability of the most complicated concepts. With the teaching experience of 14 years and training 1000’s of students now he has decided to take up the challenge to deliver the most in demand skill set currently in the industry, which is the future. Backed by his extraordinary teaching skills are the placement opportunities that Pentagon space provides which help us to complete the cycle of gaining knowledge.</h6>
+    </div>
+    <div class="three">
+    
+
+    </div>
+    <div class="two">
+        <h4>Pentagon Space would be the focal point for the people who want to master the future with niche technologies and the clients who are in search of resources can be deployed from the first day of work.</h4>
+    </div>
+    <div class="four">
+        <h1 class="h1">Our Mission</h1> 
+        <h4 class="h4">To co-create a communion of human and machine intelligence.</h4>
+    </div>
+    <div class="five">
+        <h1 class="h1">Our Vision</h1>
+        <h4 class="h4">To collaborate with future; the future being artificial intelligence.</h4>
+    </div>
+    {%endblock%}
+</body>
+</html>

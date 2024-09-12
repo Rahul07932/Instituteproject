@@ -1,0 +1,88 @@
+{%extends 'base.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    {%block a1%}
+    <style>
+       .from{
+        position: absolute;
+        margin-top:-550px;
+        background-color: gray;
+       }
+       input{
+        width:400px;
+        padding:10px;
+       }
+       .b1{
+        color:white; 
+        background-color: aqua;
+        width:100px; 
+        height: 30px;
+        border:none;
+       }
+       .b2{
+        color:white; 
+        background-color: red;
+        width:100px; 
+        height:30px;
+        border:none;
+       }
+       h1{
+        color:white;
+       }
+       .a1{
+        position:absolute;
+        margin-top:-550px;
+        margin-left:500px;
+        color:red;
+        height:200px; 
+        width:300px;
+       }
+       .a2{
+        position:absolute;
+        margin-top:-550px;
+        margin-left:800px;
+        height:200px; 
+    
+       }
+       h5{
+        color:black; 
+        font-size: larger;
+       }
+       h1{
+        color:white; 
+       }
+       h2{
+        color:blue; 
+        font-size:x-large;
+       }
+    </style>
+    <fieldset class="from">
+    <h1>Contact Information</h1>
+    <form method="POST">
+        {%csrf_token%}
+        <br><input type="text" placeholder="Enter Full Name:" name="fullname"><br>
+        <br><input type="email" placeholder="Enter Your Email Id" name="email"><br>
+        <br><input type="text" placeholder="Enter Your Mobile No" name="mob"><br>
+        <br><input type="text" placeholder="Enter Course Name:" name="course"><br> 
+        <br> <input type="text" placeholder="Enter Your Location: " name="location"><br>
+        <br>
+        <button type="submit" class="b1">Submit</button> &nbsp; &nbsp;
+        <button type="reset" class="b2">Cancel</button>
+    </form>
+    </fieldset>
+    <div class="a1">
+        <h2>Address:</h2>
+        <h5>765, 8th Main Rd, Govindaraja Nagar Ward, MC Layout, Vijayanagar, Bengaluru, Karnataka 560040</h5>
+    </div>
+    <div class="a2">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15551.765049039404!2d77.5423273!3d12.9756087!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d6c513b16a5%3A0x44a65c5cfea3693!2sPentagon%20Space%20-%20Head%20office!5e0!3m2!1sen!2sin!4v1725781292542!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    {%endblock%}
+</body>
+</html>

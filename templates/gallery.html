@@ -1,0 +1,52 @@
+{%extends 'base.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+     {%block a1%}
+     {%load static%}
+     <style>
+        h1{ 
+            position:absolute;
+            margin-top:-650px;
+           
+        }
+        table{
+            position:absolute;
+            margin-top:-600px;
+        }
+       
+        h5{
+            margin-left:30px;
+            color:blue;
+        }
+       img{
+        height:180px;
+        width:280px;
+       }
+       
+    </style>
+     <table>
+        <tr>
+            <td><img src="{%static 'images/S1.jpeg'%}"><h5> Name:Ankit Kumar<br> <br>Company Name:Hexaware</h5></td>
+            <td><img src="{%static 'images/S2.jpeg'%}"><h5> Name:Priya Kumari<br> <br>Company Name:Microsoft</h5></td>
+            <td><img src="{%static 'images/S3.jpeg'%}"><h5> Name:Kartik Kishor<br><br>Company Name:Tech Mahindra</h5></td>
+            <td><img src="{%static 'images/S4.jpeg'%}"><h5>Name:Aishwarya Singh<br><br>Company Name:Google</h5></td>
+            <td><img src="{%static 'images/S5.jpeg'%}"><h5>Name:Nitin Kumar<br><br>Company Name:Congnizant</h5></td>
+        </tr>
+        <tr>
+            <td><img src="{%static 'images/S6.jpeg'%}"><h5>Name:Harish Mahto<br><br>Company Name:Congnizant</h5></td>
+            <td><img src="{%static 'images/S7.jpeg'%}"><h5>Name:Aarna Kumari<br><br>Company Name:Lenskart</h5></td>
+            <td><img src="{%static 'images/S8.jpeg'%}"><h5>Name:Aabha Kumari<br><br>Company Name:Infosys</h5></td>
+            <td><img src="{%static 'images/S9.jpeg'%}"><h5>Name:Rahul Yadav<br><br>Company Name:TCS</h5></td>
+            <td><img src="{%static 'images/S10.jpeg'%}"><h5>Name:Ritesh Singh <br><br>Company Name:Wipro</h5></td>
+        </tr>
+     </table>
+     {%endblock%}
+</body>
+</html>

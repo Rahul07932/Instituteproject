@@ -1,0 +1,74 @@
+{%extends 'base.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {%block a1%}
+    {%load static%}
+    <style>
+      
+      
+       body{
+        background-image: url('/static/images/feedback1.jpeg');
+       }
+      
+       fieldset{
+        position: absolute;
+        margin-top:-550px;
+        margin-left:400px;
+        border:2px solid black;
+        background-color:white;
+        height:300px; 
+        width:600px;
+        box-shadow: 0px 0px 20px gray;
+        border-radius: 20px;
+       }
+       h1{
+        margin-left:150px;
+        color:red;
+       }
+       
+       textarea{
+        margin-left: 30px;
+        width:550px; 
+        height:150px;
+       }
+       .b1{
+        margin-left:30px; 
+        background-color: aqua;
+        border:none;
+        height:30px;
+       }
+       
+       .b2{
+        background-color: red;
+        border:none;
+        height:30px;
+       }
+      
+    </style>
+    
+       
+        <fieldset>
+            <h1>Feedback Form</h1>
+            <form method="POST">
+            {%csrf_token%}
+            <br><textarea placeholder="Add Your Comment Here with Your Name!" name="feedback" ></textarea>
+            <br> <br>
+            <button type="submit" class="b1">Submit</button> &nbsp; &nbsp; 
+            <button type="reset" class="b2">Cancel</button>
+
+            </form>
+        </fieldset>
+       
+
+    {%endblock%}
+      
+   
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Page</title>
+    <style>
+        .header{
+            width:1600px;
+            height:50px;
+            background-color: red;
+        }
+        a{  
+            display: inline-flex;
+            position: relative;
+            margin-left:60px; 
+            margin-top:20px;
+            color:white;
+            margin-right:50px;
+            text-decoration: none;
+            font-size: larger;
+        }
+        .footer{
+            margin-top:600px;
+            height:30px;
+            width:1600px; 
+            background-color:blue;
+        }
+        h3{
+            position: relative;
+            color:white;
+            margin-left:600px;
+            margin-top:-10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+       <a href="{%url 'home'%}">Home</a>
+       <a href="{%url 'service'%}">Courses</a>
+       <a href="{%url 'contact'%}">Contact Us</a>
+       <a href="{%url 'feedback'%}"> Feedback</a>
+       <a href="{%url 'gallery'%}"> Success Gallery</a>
+       <a href="">Hello {{request.user|capfirst}}</a>
+       <a href="{%url 'logout'%}">Logout</a>
+    </div>
+    <div class="footer">
+        <h3>@copyright@2024</h3>
+    </div>
+    {%block  a1%}
+
+
+    {%endblock%}
+</body>
+</html>
